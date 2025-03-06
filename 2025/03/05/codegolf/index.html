@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"languag3.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近没啥事情，刷了刷 codegolf 。虽然每题都用了很多的字符，但还是记录一下。(我就只写了python的，其它语言不大会)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="codegolf">
+<meta property="og:url" content="https://languag3.github.io/2025/03/05/codegolf/index.html">
+<meta property="og:site_name" content="languag3">
+<meta property="og:description" content="最近没啥事情，刷了刷 codegolf 。虽然每题都用了很多的字符，但还是记录一下。(我就只写了python的，其它语言不大会)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-05T08:57:49.000Z">
+<meta property="article:modified_time" content="2025-03-06T02:24:17.941Z">
+<meta property="article:author" content="languag3">
+<meta property="article:tag" content="study">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://languag3.github.io/2025/03/05/codegolf/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://languag3.github.io/2025/03/05/codegolf/","path":"2025/03/05/codegolf/","title":"codegolf"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>codegolf | languag3</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">languag3</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-link"><a href="/links/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>友链</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fizz-buzz"><span class="nav-number">1.</span> <span class="nav-text"> Fizz Buzz</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#foo-fizz-buzz-bar"><span class="nav-number">2.</span> <span class="nav-text"> Foo Fizz Buzz Bar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#quine"><span class="nav-number">3.</span> <span class="nav-text"> Quine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fibonacci"><span class="nav-number">4.</span> <span class="nav-text"> Fibonacci</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#prime-numbers-long"><span class="nav-number">5.</span> <span class="nav-text"> Prime Numbers (Long)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#collatz"><span class="nav-number">6.</span> <span class="nav-text"> Collatz</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#niven-numbers-long"><span class="nav-number">7.</span> <span class="nav-text"> Niven Numbers (Long)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tutorial"><span class="nav-number">8.</span> <span class="nav-text"> Tutorial</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="languag3"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">languag3</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/languag3" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;languag3" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1499304232@qq.com" title="E-Mail → mailto:1499304232@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://languag3.github.io/2025/03/05/codegolf/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="languag3">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="languag3">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="codegolf | languag3">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          codegolf
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-05 16:57:49" itemprop="dateCreated datePublished" datetime="2025-03-05T16:57:49+08:00">2025-03-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-06 10:24:17" itemprop="dateModified" datetime="2025-03-06T10:24:17+08:00">2025-03-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近没啥事情，刷了刷 <a target="_blank" rel="noopener" href="https://code.golf/">codegolf</a> 。虽然每题都用了很多的字符，但还是记录一下。(我就只写了python的，其它语言不大会)</p>
+<span id="more"></span> 
+<h1 id="fizz-buzz"><a class="markdownIt-Anchor" href="#fizz-buzz"></a> Fizz Buzz</h1>
+<p><strong>题目：</strong></p>
+<p>Print the numbers from <strong>1</strong> to <strong>100</strong> inclusive, each on their own line.</p>
+<p>If, however, the number is a multiple of <strong>three</strong> then print <strong>Fizz</strong> instead, and if the number is a multiple of <strong>five</strong> then print <strong>Buzz</strong>.</p>
+<p>If multiple conditions hold true then all replacements should be printed, for example <strong>15</strong> should print <strong>FizzBuzz</strong>.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):<span class="built_in">print</span>(i%<span class="number">3</span>//<span class="number">2</span>*<span class="string">&quot;Fizz&quot;</span>+i%<span class="number">5</span>//<span class="number">4</span>*<span class="string">&quot;Buzz&quot;</span><span class="keyword">or</span>-~i)</span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>要求很简单，3的倍数为Fizz，4的倍数为Buzz，如果既是3的倍数又是4的倍数就输出FizzBuzz。</p>
+<p>首先要短的话肯定要一个range只能就解决掉，它要的是1<sub>100的情况。但是如果直接range(100)的话会是0</sub>99，比要求的少了1。</p>
+<p>但是其实这个没有啥影响，无非就是变成了2的倍数和4的倍数罢了。我们计算 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi mathvariant="normal">%</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">i\%3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord mathnormal">i</span><span class="mord">%</span><span class="mord">3</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi mathvariant="normal">%</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">i\%5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord mathnormal">i</span><span class="mord">%</span><span class="mord">5</span></span></span></span> 的值，如果它们分别为2或者4的倍数的话，那就是模数减一，那我们再整除模数减一就好了。这样子做的话就只要用两个运算符就解决这个问题了，然后对于其它的情况我们正常来说是要输出 <code>i+1</code> 的。但是如果接在 <code>or</code> 后面的话要加个空格。那么我们可以考虑一个奇技淫巧，我们输出 <code>-~1</code> 这样子就不用加空格了 XD</p>
+<p>(但是为啥还可以少一个字符，根本想不出来，希望有人可以教教/(ㄒoㄒ)/~~)</p>
+<h1 id="foo-fizz-buzz-bar"><a class="markdownIt-Anchor" href="#foo-fizz-buzz-bar"></a> Foo Fizz Buzz Bar</h1>
+<p><strong>题目：</strong></p>
+<p>Print the numbers from <strong>1</strong> to <strong>1,000</strong> inclusive, each on their own line.</p>
+<p>If, however, the number is a multiple of <strong>two</strong> then print <strong>Foo</strong> instead, if the number is a multiple of <strong>three</strong> then print <strong>Fizz</strong>, if the number is a multiple of <strong>five</strong> then print <strong>Buzz</strong>, and if the number is a multiple of <strong>seven</strong> then print <strong>Bar</strong>.</p>
+<p>If multiple conditions hold true then all replacements should be printed, for example <strong>15</strong> should print <strong>FizzBuzz</strong>.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):<span class="built_in">print</span>(i%<span class="number">2</span>*<span class="string">&quot;Foo&quot;</span>+i%<span class="number">3</span>//<span class="number">2</span>*<span class="string">&quot;Fizz&quot;</span>+i%<span class="number">5</span>//<span class="number">4</span>*<span class="string">&quot;Buzz&quot;</span>+i%<span class="number">7</span>//<span class="number">6</span>*<span class="string">&quot;Bar&quot;</span><span class="keyword">or</span>-~i)</span><br></pre></td></tr></table></figure>
+<p>思路：</p>
+<p>和 <strong>Fizz Buzz</strong> 完全一样，但是明明完全一样，我这个 exp 却是最短的，好神奇。</p>
+<h1 id="quine"><a class="markdownIt-Anchor" href="#quine"></a> Quine</h1>
+<p><strong>题目：</strong></p>
+<p>A <strong>quine</strong> is a non-empty computer program which takes no input and produces a copy of its own source code as its only output. Produce such a program.</p>
+<p>Trailing whitespace is <strong>NOT</strong> stripped from the output for this hole. (Consequently, if your submission doesn't pass, try adding a line break at the end.)</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_=<span class="string">&#x27;_=%r;print(_%%_)&#x27;</span>;<span class="built_in">print</span>(_%_)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>思路：</p>
+<p>其实直接参考 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/6223285/shortest-python-quine">https://stackoverflow.com/questions/6223285/shortest-python-quine</a> 就好了。</p>
+<p>不过很显然这个仍然不是最短的，因为相比第一它还是多了一个byte，但是我目前还没有找到方法。</p>
+<h1 id="fibonacci"><a class="markdownIt-Anchor" href="#fibonacci"></a> Fibonacci</h1>
+<p><strong>题目：</strong></p>
+<p>The Fibonacci numbers are a numerical sequence in which each number is the sum of the two preceding numbers: <strong>0, 1, 1, 2, 3, 5, 8, 13…</strong></p>
+<p>Print the first <strong>31</strong> Fibonacci numbers from <strong>F0 = 0</strong> to <strong>F30 = 832040</strong> (inclusive), each on a separate line.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a,b=<span class="number">0</span>,<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a&lt;<span class="number">9e5</span>:<span class="built_in">print</span>(a);a,b=b,a+b</span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>我觉得这个也没啥可以优化的，小细节可能就是可以用 <code>9e5</code> 这种科学记数法来替代 <code>832040</code>。然后再使用 <code>a,b=b,a+b</code> 来替代传统的交换字符的方式。不过这个仍然比最短的 exp 多了2bytes。</p>
+<h1 id="prime-numbers-long"><a class="markdownIt-Anchor" href="#prime-numbers-long"></a> Prime Numbers (Long)</h1>
+<p><strong>Prime Numbers</strong> 和 <strong>Prime Numbers (Long)</strong> 我用了同样的方式，不过 Prime Numbers 要的值很小应该可以优化好多地方，这个等以后再说了。</p>
+<p><strong>题目：</strong></p>
+<p>Print all the prime numbers from <strong>1</strong> to <strong>10,000</strong> (不是 Long 的话是 <strong>100</strong>) inclusive, each on their own line.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k=P=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> k&lt;<span class="number">1e4</span>:P%k&gt;<span class="number">0</span>==<span class="built_in">print</span>(k);P*=k*k;k+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>首先我们写一个10000以内质数生成的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">k = <span class="number">1</span></span><br><span class="line">P = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> k &lt; <span class="number">10000</span>:</span><br><span class="line">    <span class="keyword">if</span> P % k &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(k)</span><br><span class="line">    P *= k * k</span><br><span class="line">    k += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>这个算法利用了如果 <code>k</code> 为质数，那么它不会被任何小于其的质数整除的性质。所以我们让 <code>P</code> 为所有小于 <code>k</code> 的质数的平方的乘积，通过判断 <code>P%k</code> 是否为 0 来得到质数。</p>
+<p>首先我们可以先进行简单的压缩，我们可以改写代码为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">k=P=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> k&lt;<span class="number">1e4</span>:</span><br><span class="line"> <span class="keyword">if</span> P%k&gt;<span class="number">0</span>:<span class="built_in">print</span>(k)</span><br><span class="line"> P*=k*k;k+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>然后我们可以发现，这个判断语句的存在会导致要多加一行，如何可以去掉这个判断语句肯定可以再次缩短代码。这时候我们可以考虑一下短路运算。我们首先要知道一件事情，对于 python 来说，在执行 <code>A and B</code> 的时候，如果 A 为<code>Flase</code> 那么它就不会再计算 B 了。而对于 <code>A or B</code> 的话，如果 A 为 <code>True</code> 的话，它也不会计算 B 了。而在代码中，如果要打印 k 的话，必须要满足 <code>P%k&gt;0</code> 成立，那么如果代码可以改成类似 <code>P%k and print(k)</code> 的话，那么就可以满足 <code>P%k&gt;0</code> 成立后才可以打印 k，但是直接 <code>P%k&gt;0 and print(k)</code> 的话还是会多两个空格，是否有更加好的方式呢？其实我们可以考虑 <code>P%k&gt;0==print(k)</code></p>
+<p>为何这个可以实现短路呢，因为对于 python 来说，python的比较运算符支持链式规则。啥是链式规则呢？举个例子，对于比价判断 <code>a&lt;b&lt;c</code> ，其实它是被解释为 <code>a&lt;b and b&lt;c</code> 来执行。那么对于上面的代码来说，其实就是解释为 <code>P%k&gt;0 and 0==print(k)</code>，故只有满足前面的才会执行后面的代码，其实后面是什么都无所谓了，因为必然要执行 <code>print(k)</code> 来输出 k。</p>
+<p>不过这仍然不是最短的，最短的代码比我这个还要再少一个字符。</p>
+<h1 id="collatz"><a class="markdownIt-Anchor" href="#collatz"></a> Collatz</h1>
+<p><strong>题目：</strong></p>
+<p>The Collatz conjecture states that, for any positive integer <strong>n</strong>, it will eventually reach 1 by repeatedly applying the following procedure:</p>
+<ul>
+<li>If <strong>n</strong> is even, divide it by 2.</li>
+<li>If <strong>n</strong> is odd, multiply by 3 and then add 1.</li>
+</ul>
+<p>The number of steps needed for <strong>n</strong> to reach 1 is called its stopping time. For example, the stopping time of <strong>10</strong> is six:</p>
+<p><strong>10 → 5 → 16 → 8 → 4 → 2 → 1</strong></p>
+<p>Print the stopping times of all the numbers from <strong>1</strong> to <strong>1,000</strong> inclusive, each on their own line.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1001</span>):</span><br><span class="line"> t=<span class="number">0</span></span><br><span class="line"> <span class="keyword">while</span>~-i:i=[i//<span class="number">2</span>,<span class="number">3</span>*i+<span class="number">1</span>][i&amp;<span class="number">1</span>];t+=<span class="number">1</span></span><br><span class="line"> <span class="built_in">print</span>(t)</span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>首先我们先简单写一个解决题目的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1001</span>):</span><br><span class="line"> t=<span class="number">0</span></span><br><span class="line"> <span class="keyword">while</span> i&gt;<span class="number">1</span>:i=<span class="number">3</span>*i+<span class="number">1</span> <span class="keyword">if</span> i&amp;<span class="number">1</span> <span class="keyword">else</span> i//<span class="number">2</span>;t+=<span class="number">1</span></span><br><span class="line"> <span class="built_in">print</span>(t)</span><br></pre></td></tr></table></figure>
+<p>其实这个优化思路挺直观的，直接把 <code>while i&gt;1:i=3*i+1 if i&amp;1 else i//2;t+=1</code> 就可以减少一大串了，首先我们关注这个判断语句，<code>i</code> 的值由 <code>i&amp;1</code> 来决定。我们要知道，对于 python 来说，<code>True</code> 其实就是1，<code>False</code> 其实就是0，0和1可以想到什么呢？其实就是列表，为何这么说呢，我们可以考虑一个这样子的判断语句 <code>i=[i//2,3*i+1][i&amp;1]</code>。我们可以发现，当  <code>i&amp;1</code>  为 <code>True</code> 时，i 为 <code>3*i+1</code>，反之就是另一个，这个很显然和之前的实现方式完全一样，但是省去了好多的字符。再后面，我想了好久也没想到哦可以优化啥。最后突然想到，<code>while i&gt;1</code> 其实可以省去一个空格，我们可以改写为 <code>while~-i</code>，这样子在 i 为1的时候就是 <code>while 0</code> 了直接结束了这个循环语句。</p>
+<p>当然，这个肯定还可以优化许多，不过那是未来的事情了。</p>
+<h1 id="niven-numbers-long"><a class="markdownIt-Anchor" href="#niven-numbers-long"></a> Niven Numbers (Long)</h1>
+<p>和 <strong>Prime Numbers</strong> 一样，<strong>Niven Numbers</strong> 和 <strong>Niven Numbers (Long)</strong> 我用了同样的思路</p>
+<p><strong>题目：</strong></p>
+<p>A Niven number is a positive integer that is divisible by the sum of its digits.</p>
+<p>Print all the Niven numbers from <strong>1</strong> to <strong>10,000</strong> (or <strong>100</strong>) inclusive, each on their own line.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">1e4</span>:i+=<span class="number">1</span>;i%<span class="built_in">sum</span>(<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">str</span>(i)))<span class="keyword">or</span> <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>其实这个感觉还是挺直观的，基本上把基础的一些压缩方式用到了就可以很短了。</p>
+<p>不过最短只要50个bytes，那可能要用到一些很深奥的位运算了。</p>
+<p>(其实还有个 idea 就是在 <code>i=0\n while i&lt;1e4:i+=1;i%eval('+'.join(f'&#123;i&#125;'))or print(i)</code> 的基础上压缩，但是似乎还不如我现在这个)</p>
+<h1 id="tutorial"><a class="markdownIt-Anchor" href="#tutorial"></a> Tutorial</h1>
+<p><strong>题目：</strong></p>
+<p>Output the same output as the sample code would produce. The string <strong>&quot;Hello, World!&quot;</strong>, the integers <strong>0</strong> to <strong>9</strong>, and any number of <strong>arguments</strong>. Everything on an individual line.</p>
+<p><strong>exp：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys;[*<span class="built_in">map</span>(<span class="built_in">print</span>,[<span class="string">&#x27;Hello, World!&#x27;</span>,*<span class="built_in">range</span>(<span class="number">10</span>)]+sys.argv[<span class="number">1</span>:])]</span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>这个算是入门题目了，就是优化最开始的例子</p>
+<p>我们看一下例子里的python代码是什么</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment"># Printing</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello, World!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Looping</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Accessing arguments</span></span><br><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> sys.argv[<span class="number">1</span>:]:</span><br><span class="line">    <span class="built_in">print</span>(arg)</span><br></pre></td></tr></table></figure>
+<p>那首先肯定要把注释符去掉，该压缩的全部压缩了。就可以拿到</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys;<span class="built_in">print</span>(<span class="string">&#x27;Hello, World!&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):<span class="built_in">print</span>(i)</span><br><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> sys.argv[<span class="number">1</span>:]:<span class="built_in">print</span>(arg)</span><br></pre></td></tr></table></figure>
+<p>然后我们可以发现，其实可以把它们都看成列表的话，如果可以合到一起那肯定可以大大减少代码量。这时候就可以改写一下代码，全部丢在一块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys;[<span class="built_in">print</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="string">&#x27;Hello, World!&#x27;</span>,*<span class="built_in">range</span>(<span class="number">10</span>)]+sys.argv[<span class="number">1</span>:]]</span><br></pre></td></tr></table></figure>
+<p>但是这样子就要调用循环语句了，那我们可以想到 <code>map</code> 函数，利用起来进行二次压缩就可以得到最终的版本了。</p>
+<p>不过这仍然不是最短的(榜上那些都是什么神仙(T_T))，还可以往下压1个字符。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/study/" rel="tag"><i class="fa fa-tag"></i> study</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/02/21/HKCERT2024/" rel="prev" title="HKCERT2024">
+                  <i class="fa fa-angle-left"></i> HKCERT2024
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">languag3</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+
+</body>
+</html>
